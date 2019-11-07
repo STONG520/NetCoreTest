@@ -1,0 +1,23 @@
+﻿@model Heavy.Web.ViewModels.UserCreateViewModel
+@{
+    ViewData["Title"] = "UpdateUser";
+}
+<form asp-action="UpdateUser" method="post" asp-controller="User">
+    <input type="hidden" value="@Model.id" name="id" />
+    <div class="form-group">
+        <label asp-for="userName"></label>
+        <input type="text" value="@Model.userName" class="form-control" id="exampleInputEmail1" asp-for="userName">
+        <span asp-validation-for="userName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="userPassword"></label>
+        <input type="password" value="@Model.userPassword" class="form-control" id="exampleInputEmail1" placeholder="Password" asp-for="userPassword">
+        <span asp-validation-for="userPassword"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="userEmail"></label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="email" value="@Model.userEmail" asp-for="userEmail">
+        <span asp-validation-for="userEmail"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

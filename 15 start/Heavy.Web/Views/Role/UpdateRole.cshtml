@@ -1,0 +1,32 @@
+﻿@using Heavy.Web.ViewModels
+@model UserToRoleViewModel
+
+@{
+    ViewData["Title"] = "UpdteRole";
+}
+
+<form asp-action="Update" asp-controller="Role" method="post">
+    <input name="id" value="@Model.roleId" type="hidden" />
+    <div class="form-group">
+        <label asp-for="roleName"></label>
+        <input type="text" class="form-control" id="exampleInputEmail1" asp-for="roleName">
+        <span asp-validation-for="roleName"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">更改</button>
+    <button type="button" class="btn btn-primary" onclick="returnBack();">返回</button>
+</form>
+
+<ul>
+    @for (int i = 0; i < Model.userNames.Count; i++)
+    {
+        <li>@Model.userNames[i]</li>
+
+    }
+</ul>
+<a class="btn btn-primary" asp-action="AddUserToRole" asp-route-roleId="@Model.roleId" role="button">添加用户到角色</a>
+<a class="btn btn-primary" asp-action="DeleteRole" asp-route-roleId="@Model.roleId" role="button">移除用户</a>
+<script type="text/javascript">
+    function returnBack() {
+        window.history.back(-1);
+    }
+</script>

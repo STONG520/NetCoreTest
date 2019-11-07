@@ -1,0 +1,23 @@
+﻿@using Heavy.Web.ViewModels
+@model AddUserToRoleViewModel
+@{ 
+
+    ViewData["title"] = "添加用户到角色";
+}
+<form asp-action="AddUserToRole" asp-controller="Role" method="post">
+    <div class="form-group">
+        <input type="hidden" value="@Model.roleId" name="roleId" />
+        <select asp-for="userId" class="form-control" asp-items="@(new SelectList(Model.identityUsers, "Id", "UserName"))">
+            <option>----请选择一个用户----</option>
+        </select>
+    </div>
+      
+    <button type="submit" class="btn btn-primary">添加</button>
+    <button type="button" class="btn btn-primary" onclick="returnBack();">返回</button>
+</form>
+
+<script type="text/javascript">
+    function returnBack (){
+        window.history.back(-1); 
+    } 
+</script>
