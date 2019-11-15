@@ -27,3 +27,4 @@ E:\学习\NET CORE学习\WebApplication2\WebApplication2\obj\Release\netcoreapp2
 E:\学习\NET CORE学习\WebApplication2\WebApplication2\obj\Release\netcoreapp2.2\WebApplication2.dll
 E:\学习\NET CORE学习\WebApplication2\WebApplication2\obj\Release\netcoreapp2.2\WebApplication2.pdb
 E:\学习\NET CORE学习\WebApplication2\WebApplication2\obj\Release\netcoreapp2.2\WebApplication2.csproj.CopyComplete
+E:\学习\NET CORE学习\WebApplication2\WebApplication2\obj\Release\netcoreapp2.2\WebApplication2.csprojAssemblyReference.cache
